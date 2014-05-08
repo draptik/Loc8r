@@ -1,8 +1,16 @@
 
 /*
- * GET home page.
+ * GET 'about us' page.
  */
 
-exports.index = function(req, res){
-  res.render('index', { title: 'Express' });
+module.exports.about = function (req, res) {
+	res.render('index', {title: 'About'});
+};
+
+/*
+ * GET 'sign in' page.
+ */
+
+module.exports.signin = function (req, res) {
+	res.render('index', {title: 'Sign in'});
 };
