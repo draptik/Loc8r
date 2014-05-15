@@ -4,7 +4,7 @@
  */
 
 module.exports.about = function (req, res) {
-	res.render('index', {title: 'About'});
+	res.render('generic-text', {title: 'About'});
 };
 
 /*
@@ -12,5 +12,10 @@ module.exports.about = function (req, res) {
  */
 
 module.exports.signin = function (req, res) {
-	res.render('index', {title: 'Sign in'});
+	res.render('signin-index', {title: 'Sign in to Loc8r'});
+};
+
+
+module.exports.playground = function (req, res) {
+	res.render('playground', {title: 'Playground'});
 };
