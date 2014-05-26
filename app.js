@@ -9,6 +9,8 @@ var path = require('path');
 
 var app = express();
 
+require('./app_server/models/db');
+
 // all environments
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'app_server/views'));
