@@ -17,3 +17,19 @@ My current snapshot is at http://draptik-getting-mean-loc8r.herokuapp.com/
 ## Deployment to Heroku
 
 `git push heroku master`
+
+## Heroku and MongoLab issues
+
+[http://www.manning-sandbox.com/thread.jspa?threadID=69116&tstart=0](http://www.manning-sandbox.com/thread.jspa?threadID=69116&tstart=0)
+
+[https://devcenter.heroku.com/articles/config-vars#using-foreman-and-heroku-config](https://devcenter.heroku.com/articles/config-vars#using-foreman-and-heroku-config)
+
+`heroku plugins:install git://github.com/ddollar/heroku-config.git`
+
+`heroku config:pull --overwrite --interactive`
+
+Creates `.env` file with `MONGOLAB_URI`.
+
+Add `.env` file to `.gitignore`:
+
+`echo ".env" >> .gitignore`

@@ -6,3 +6,4 @@
 *.sublime-*
 
 npm-debug.log
+.env
