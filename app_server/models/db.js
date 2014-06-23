@@ -55,3 +55,5 @@ if (process.platform === "win32") {
     process.emit ("SIGINT");
   });
 }
+
+require('./locations');
