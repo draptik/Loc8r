@@ -6,10 +6,8 @@
 var express = require('express');
 var http = require('http');
 var path = require('path');
-
+require('./app_api/models/db');
 var app = express();
-
-require('./app_server/models/db');
 
 // all environments
 app.set('port', process.env.PORT || 3000);
@@ -31,6 +29,7 @@ if ('development' == app.get('env')) {
 }
 
 require('./routes')(app);
+require('./app_api/routes')(app);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
